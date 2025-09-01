@@ -1,6 +1,6 @@
 # Azure ML Workshop
 
-This repositry is provided for a simle Azure ML Workshop
+This repository provides a concise end-to-end workshop on Azure ML Workspace.
 
 ## Structure
 
