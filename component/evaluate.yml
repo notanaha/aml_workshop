@@ -1,0 +1,21 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+name: evaluate_model
+display_name: evaluate-model
+description: evaluate diabetes model
+version: 1
+type: command
+code: ../scripts
+command: >-
+  python evaluate.py 
+  --experiment_name ${{inputs.experiment_name}} 
+  --model_dir ${{inputs.model_dir}} 
+  --deploy_flag ${{outputs.deploy_flag}}
+environment: azureml:diabetes-env-01@latest
+inputs:
+  experiment_name:
+    type: string
+  model_dir:
+    type: uri_folder
+outputs:
+  deploy_flag:
+    type: uri_file

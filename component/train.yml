@@ -1,0 +1,22 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+name: train_model
+display_name: train-model
+description: train diabetes model
+version: 1
+type: command
+code: ../scripts
+command: >-
+  python train-diabetes.py 
+  --input_data ${{inputs.input_data}}
+  --output_dir ${{outputs.output_dir}}
+  --alpha ${{inputs.alpha}}
+environment: azureml:diabetes-env-01@latest
+inputs:
+  input_data:
+    type: uri_file
+  alpha:
+    type: number
+    default: 0.03
+outputs:
+  output_dir:
+    type: mlflow_model

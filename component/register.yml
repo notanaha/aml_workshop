@@ -1,0 +1,20 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+name: register_model
+display_name: register-model
+description: register diabetes model
+version: 1
+type: command
+code: ../scripts
+command: >-
+  python register.py 
+  --model_name ${{inputs.model_name}} 
+  --model_path ${{inputs.model_path}} 
+  --deploy_flag ${{inputs.deploy_flag}}
+environment: azureml:diabetes-env-02@latest
+inputs:
+  model_name:
+    type: string
+  model_path:
+    type: uri_folder
+  deploy_flag:
+    type: uri_file

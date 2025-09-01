@@ -1,0 +1,21 @@
+# Core scientific stack
+numpy>=1.26
+pandas~=2.2
+scikit-learn~=1.5
+matplotlib~=3.9
+joblib~=1.4
+
+# MLflow for tracking, model I/O, and autologging
+mlflow~=2.13
+
+# Azure ML (v1 runtime for components/inference) and defaults for scoring
+azureml-core~=1.60
+azureml-mlflow~=1.60
+azureml-defaults~=1.60
+
+# Azure ML (v2 SDK) for pipelines/endpoints from notebooks
+azure-ai-ml>=1.14,<2.0
+azure-identity>=1.16,<2.0
+
+# Utilities
+python-dotenv>=1.0,<2.0
