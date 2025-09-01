@@ -19,11 +19,13 @@ This repository provides a concise end-to-end workshop on Azure ML Workspace.
 
 ## Quickstart
 
-Clone this repository on Azure ML Terminal.
-Use the azureml_py310_sdkv2 kernel to run the notebooks below.
+Clone this repository from the Azure ML terminal.
+Use the **azureml_py310_sdkv2** kernel to run the notebooks.
+<br>When using **azureml_py310_sdkv2**, you don’t need to install the packages from requirements.txt, but you may need to install python-dotenv manually.
 
+Run notebooks.
 - 01_train.ipynb
 - 02_endpoint.ipynb
 - 03_pipeline.ipynb
 
-You may need to pip install python-dotenv manually.
+
