@@ -6,7 +6,8 @@ from mlflow.pyfunc import load_model
 def init():
     global model
     
-    model_path = os.path.join(os.environ["AZUREML_MODEL_DIR"], "models")
+    #model_path = os.path.join(os.environ["AZUREML_MODEL_DIR"], "models")
+    model_path = os.path.join(os.environ["AZUREML_MODEL_DIR"], "outputs")
 #    model_path = os.path.join(os.environ["AZUREML_MODEL_DIR"], "diabetes_model_oh4ml")
 #    model_path = Model.get_model_path(args.model_name)
     model = load_model(model_path)  
