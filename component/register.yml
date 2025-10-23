@@ -10,7 +10,7 @@ command: >-
   --model_name ${{inputs.model_name}} 
   --model_path ${{inputs.model_path}} 
   --deploy_flag ${{inputs.deploy_flag}}
-environment: azureml:diabetes-env-02@latest
+environment: azureml:diabetes-env-01@latest
 inputs:
   model_name:
     type: string
